@@ -117,24 +117,24 @@ UniversalAutoload.SHOP_ICON = UniversalAutoload.path .. "icons/shop_icon.dds"
 
 -- class tables
 UniversalAutoload.ACTIONS = {
-	["GLOBAL_MENU"]          = "UNIVERSALAUTOLOAD_GLOBAL_MENU",
-	["TOGGLE_LOADING"]		 = "UNIVERSALAUTOLOAD_TOGGLE_LOADING",
-	["UNLOAD_ALL"]			 = "UNIVERSALAUTOLOAD_UNLOAD_ALL",
-	["TOGGLE_TIPSIDE"]		 = "UNIVERSALAUTOLOAD_TOGGLE_TIPSIDE",
+	["GLOBAL_MENU"]           = "UNIVERSALAUTOLOAD_GLOBAL_MENU",
+	["TOGGLE_LOADING"]		  = "UNIVERSALAUTOLOAD_TOGGLE_LOADING",
+	["UNLOAD_ALL"]			  = "UNIVERSALAUTOLOAD_UNLOAD_ALL",
+	["TOGGLE_TIPSIDE"]		  = "UNIVERSALAUTOLOAD_TOGGLE_TIPSIDE",
 	["TOGGLE_FILTER"]		  = "UNIVERSALAUTOLOAD_TOGGLE_FILTER",
 	["TOGGLE_HORIZONTAL"]	  = "UNIVERSALAUTOLOAD_TOGGLE_HORIZONTAL",
 	["CYCLE_MATERIAL_FW"]	  = "UNIVERSALAUTOLOAD_CYCLE_MATERIAL_FW",
 	["CYCLE_MATERIAL_BW"]	  = "UNIVERSALAUTOLOAD_CYCLE_MATERIAL_BW",
-	["SELECT_ALL_MATERIALS"]   = "UNIVERSALAUTOLOAD_SELECT_ALL_MATERIALS",
-	["CYCLE_CONTAINER_FW"]	 = "UNIVERSALAUTOLOAD_CYCLE_CONTAINER_FW",
-	["CYCLE_CONTAINER_BW"]	 = "UNIVERSALAUTOLOAD_CYCLE_CONTAINER_BW",
-	["SELECT_ALL_CONTAINERS"]  = "UNIVERSALAUTOLOAD_SELECT_ALL_CONTAINERS",
-	-- ["TOGGLE_BELTS"]		   = "UNIVERSALAUTOLOAD_TOGGLE_BELTS",
-	-- ["TOGGLE_DOOR"]			= "UNIVERSALAUTOLOAD_TOGGLE_DOOR",
-	-- ["TOGGLE_CURTAIN"]		   = "UNIVERSALAUTOLOAD_TOGGLE_CURTAIN",
-	["TOGGLE_SHOW_DEBUG"]	   = "UNIVERSALAUTOLOAD_TOGGLE_SHOW_DEBUG",
-	["TOGGLE_SHOW_LOADING"]	   = "UNIVERSALAUTOLOAD_TOGGLE_SHOW_LOADING",
-	["TOGGLE_COLLECTION"]	   = "UNIVERSALAUTOLOAD_TOGGLE_COLLECTION",
+	["SELECT_ALL_MATERIALS"]  = "UNIVERSALAUTOLOAD_SELECT_ALL_MATERIALS",
+	["CYCLE_CONTAINER_FW"]	  = "UNIVERSALAUTOLOAD_CYCLE_CONTAINER_FW",
+	["CYCLE_CONTAINER_BW"]	  = "UNIVERSALAUTOLOAD_CYCLE_CONTAINER_BW",
+	["SELECT_ALL_CONTAINERS"] = "UNIVERSALAUTOLOAD_SELECT_ALL_CONTAINERS",
+	-- ["TOGGLE_BELTS"]		  = "UNIVERSALAUTOLOAD_TOGGLE_BELTS",
+	-- ["TOGGLE_DOOR"]		  = "UNIVERSALAUTOLOAD_TOGGLE_DOOR",
+	-- ["TOGGLE_CURTAIN"]	  = "UNIVERSALAUTOLOAD_TOGGLE_CURTAIN",
+	["TOGGLE_SHOW_DEBUG"]	  = "UNIVERSALAUTOLOAD_TOGGLE_SHOW_DEBUG",
+	["TOGGLE_SHOW_LOADING"]	  = "UNIVERSALAUTOLOAD_TOGGLE_SHOW_LOADING",
+	["TOGGLE_COLLECTION"]	  = "UNIVERSALAUTOLOAD_TOGGLE_COLLECTION",
 }
 
 UniversalAutoload.WARNINGS = {
@@ -2336,6 +2336,29 @@ function UniversalAutoloadManager:loadMap(name)
 		-- UniversalAutoload.debugPrint("  - "..i..": "..key.." = "..UniversalAutoload.MATERIALS_FILLTYPE[i].title)
 		UniversalAutoload.MATERIALS_INDEX[key] = i
 	end
+
+	-- Cache static i18n strings used every HUD refresh to avoid repeated getText() calls
+	UniversalAutoload.i18n = {
+		materialType    = g_i18n:getText("universalAutoload_materialType") .. ": ",
+		containerType   = g_i18n:getText("universalAutoload_containerType") .. ": ",
+		loadingFilter   = g_i18n:getText("universalAutoload_loadingFilter") .. ": ",
+		loadingMethod   = g_i18n:getText("universalAutoload_loadingMethod") .. ": ",
+		tipside         = g_i18n:getText("universalAutoload_tipside") .. ": ",
+		fullOnly        = g_i18n:getText("universalAutoload_fullOnly"),
+		loadAny         = g_i18n:getText("universalAutoload_loadAny"),
+		layer           = g_i18n:getText("universalAutoload_layer"),
+		stack           = g_i18n:getText("universalAutoload_stack"),
+		startLoading    = g_i18n:getText("universalAutoload_startLoading"),
+		stopLoading     = g_i18n:getText("universalAutoload_stopLoading"),
+		unloadAll       = g_i18n:getText("universalAutoload_unloadAll"),
+		collectionMode  = g_i18n:getText("universalAutoload_collectionMode"),
+		baleMode        = g_i18n:getText("universalAutoload_baleMode"),
+		logMode         = g_i18n:getText("universalAutoload_logMode"),
+		palletMode      = g_i18n:getText("universalAutoload_palletMode"),
+		enabled         = g_i18n:getText("universalAutoload_enabled"),
+		disabled        = g_i18n:getText("universalAutoload_disabled"),
+		globalSettings  = "UAL " .. g_i18n:getText("ui_global_settings_ual"),
+	}
 
 	-- USER SETTINGS FIRST
 	UniversalAutoloadManager.importLocalConfigurations()

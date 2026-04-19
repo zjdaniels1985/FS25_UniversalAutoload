@@ -1,9 +1,10 @@
 # FS25_UniversalAutoload
+
 ---------------------------------------------------
 
-Please get the latest ModHub release from: https://www.farming-simulator.com/mod.php?mod_id=325409
+Please get the latest ModHub release from: <https://www.farming-simulator.com/mod.php?mod_id=325409>
 
-Or the latest development release from: https://github.com/loki79uk/FS25_UniversalAutoload/releases
+Or the latest development release from: <https://github.com/zjdaniels1985/FS25_UniversalAutoload/releases>
 
 ---------------------------------------------------
 
@@ -14,12 +15,14 @@ Or the latest development release from: https://github.com/loki79uk/FS25_Univers
 - In multiplayer games all clients can edit vehicles when they buy one, but the configuration is saved ON THE SERVER only.  So the server default will be set by the last player to adjust it.  As with single player, individual vehicle settings will persist for the rest of that game until the server is restarted, after that the default is applied to all vehicles of the same type.
 
 If you are having issues with a vehicle not loading pallets at all then there are a few things to check
+
 - If you cant load LOGS then check that the logs are too long for you trailer.  Make the zone longer or cut the logs shorter.
 - If you do not see a loading zone with the debug display (shift-ctrl-F12) then the most likely thing is that the entry for that vehicle is corrupted in your mod settings file.  Try deleting the file completely (a new one will be created), or manually delete the entry for the vehicle you are having trouble with in a text editor.
 - It is also possible you simply don't have the trailer selected/active in game.  Press "G" to cycle the selected implement from your tractor/truck.
 
 ---------------------------------------------------
 NEW FEATURES:
+
 - All pallets, big-bags and bales supported by default
 - Automatic detection of trailer loading zones (in shop)
 - UI to adjust size of loading zone in shop before purchase
@@ -27,6 +30,7 @@ NEW FEATURES:
 
 ---------------------------------------------------
 TO CONFIGURE LOADING ZONES:
+
 - Use middle mouse click in the shop to activate editing
 - Right click drag to move individual faces
 - ALT-right click drag to move opposing faces (**use this for width**)
@@ -37,4 +41,5 @@ TO CONFIGURE LOADING ZONES:
 
 ---------------------------------------------------
 KNOWN ISSUES:
+
 - Existing trailers on a savegame will not get autoload added (until restart with valid settings)

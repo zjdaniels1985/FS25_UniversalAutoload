@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="101">
 
-    <author>loki_79</author>
-    <version>1.0.2.6</version>
-    
+    <author>DarkStar</author>
+    <version>2.0.0.0</version>
+
     <title>
-        <en>Universal Autoload</en>
-        <!-- <de>Universal Autoload</de> -->
-        <fr>Autoload Universel</fr>
-        <ru>Универсальная Автозагрузка</ru>
-        <nl>Universele Autoload</nl>
-        <cz>Univerzální Autoload</cz>
-        <pl>Universalne Autoładowanie</pl>
-        <es>Autoload Universal</es>
-        <br>Carregamento Automático Universal</br>
-        <tr>Evrensel Otomatik Yükleme</tr>
-        <cs>通用自动装载</cs>
+        <en>Universal Autoload CL</en>
+        <!-- <de>Universal Autoload CL</de> -->
+        <fr>Autoload Universel CL</fr>
+        <ru>Универсальная Автозагрузка CL</ru>
+        <nl>Universele Autoload CL</nl>
+        <cz>Univerzální Autoload CL</cz>
+        <pl>Universalne Autoładowanie CL</pl>
+        <es>Autoload Universal CL</es>
+        <br>Carregamento Automático Universal CL</br>
+        <tr>Evrensel Otomatik Yükleme CL</tr>
+        <cs>通用自动装载 CL</cs>
     </title>
-    
+
     <description>
-<en><![CDATA[Autoloading specialisation for trailers.  This automatically modifies the actual base game trailers, and will be applied to any new or existing trailers on your farm.  Supported trailers can be configured with a GUI when purchasing in the shop.  Please see the included read-me file for full instructions on configuration.
+        <en><![CDATA[Autoloading specialisation for trailers.  This automatically modifies the actual base game trailers, and will be applied to any new or existing trailers on your farm.  Supported trailers can be configured with a GUI when purchasing in the shop.  Please see the included read-me file for full instructions on configuration.
 
 Features:
 - Loads all pallet/container types
@@ -36,11 +36,11 @@ v1.0.1.0
 - Prevented some runtime errors
 - Improved loading of shipping containers
 
-GitHub-Link: https://github.com/loki79uk/FS25_UniversalAutoload
+GitHub-Link: https://github.com/zjdaniels1985/FS25_UniversalAutoload
 ]]>
 </en>
 
-<de><![CDATA[Autoloading-Spezialisierung für Anhänger.  Dies modifiziert automatisch die aktuellen Anhänger des Basisspiels und wird auf alle neuen oder bestehenden Anhänger auf eurer Farm angewendet.  Unterstützte Anhänger können über eine grafische Benutzeroberfläche beim Kauf im Shop konfiguriert werden.  Eine ausführliche Anleitung zur Konfiguration finden Sie in der mitgelieferten Read-me-Datei.
+        <de><![CDATA[Autoloading-Spezialisierung für Anhänger.  Dies modifiziert automatisch die aktuellen Anhänger des Basisspiels und wird auf alle neuen oder bestehenden Anhänger auf eurer Farm angewendet.  Unterstützte Anhänger können über eine grafische Benutzeroberfläche beim Kauf im Shop konfiguriert werden.  Eine ausführliche Anleitung zur Konfiguration finden Sie in der mitgelieferten Read-me-Datei.
 
 Eigenschaften:
 - Lädt alle Paletten-/Containertypen
@@ -57,102 +57,122 @@ v1.0.1.0
 - Einige Laufzeitfehler wurden behoben
 - Das Laden von Versandcontainern wurde verbessert
 
-GitHub-Link: https://github.com/loki79uk/FS25_UniversalAutoload
+GitHub-Link: https://github.com/zjdaniels1985/FS25_UniversalAutoload
 ]]>
 </de>
     </description>
-    
+
     <multiplayer supported="true" />
     <iconFilename>icon_UniversalAutoload.dds</iconFilename>
-    
+
     <extraSourceFiles>
         <sourceFile filename="UniversalAutoloadInstaller.lua" />
     </extraSourceFiles>
-    
+
     <l10n filenamePrefix="language/l10n" />
-    
+
     <actions>
-        <action name="UNIVERSALAUTOLOAD_SHOP_CONFIG" category="MENU_SHOP_CONFIG" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_SHOP_ADJUST" category="MENU_SHOP_CONFIG" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_GLOBAL_MENU" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_LOADING" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_UNLOAD_ALL" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_TIPSIDE" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_FILTER" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_HORIZONTAL" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_CYCLE_MATERIAL_FW" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_CYCLE_MATERIAL_BW" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_SELECT_ALL_MATERIALS" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_CYCLE_CONTAINER_FW" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_CYCLE_CONTAINER_BW" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_SELECT_ALL_CONTAINERS" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_BELTS" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_DOOR" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_CURTAIN" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_SHOW_DEBUG" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_SHOW_LOADING" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
-        <action name="UNIVERSALAUTOLOAD_TOGGLE_COLLECTION" category="VEHICLE" axisType="HALF" ignoreComboMask="false"/>
+        <action name="UNIVERSALAUTOLOAD_SHOP_CONFIG" category="MENU_SHOP_CONFIG" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_SHOP_ADJUST" category="MENU_SHOP_CONFIG" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_GLOBAL_MENU" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_LOADING" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_UNLOAD_ALL" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_TIPSIDE" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_FILTER" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_HORIZONTAL" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_CYCLE_MATERIAL_FW" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_CYCLE_MATERIAL_BW" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_SELECT_ALL_MATERIALS" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_CYCLE_CONTAINER_FW" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_CYCLE_CONTAINER_BW" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_SELECT_ALL_CONTAINERS" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_BELTS" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_DOOR" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_CURTAIN" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_SHOW_DEBUG" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_SHOW_LOADING" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
+        <action name="UNIVERSALAUTOLOAD_TOGGLE_COLLECTION" category="VEHICLE" axisType="HALF"
+            ignoreComboMask="false" />
     </actions>
-    
+
     <inputBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_SHOP_CONFIG" >
+        <actionBinding action="UNIVERSALAUTOLOAD_SHOP_CONFIG">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_a" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_SHOP_ADJUST" >
+        <actionBinding action="UNIVERSALAUTOLOAD_SHOP_ADJUST">
             <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_MIDDLE" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_GLOBAL_MENU" >
+        <actionBinding action="UNIVERSALAUTOLOAD_GLOBAL_MENU">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_lshift KEY_a" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_LOADING" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_LOADING">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_r" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_UNLOAD_ALL" >
+        <actionBinding action="UNIVERSALAUTOLOAD_UNLOAD_ALL">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_i" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_TIPSIDE" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_TIPSIDE">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_u" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_FILTER" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_FILTER">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_o" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_HORIZONTAL" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_HORIZONTAL">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_insert" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_CYCLE_MATERIAL_FW" >
+        <actionBinding action="UNIVERSALAUTOLOAD_CYCLE_MATERIAL_FW">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_y" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_CYCLE_MATERIAL_BW" >
+        <actionBinding action="UNIVERSALAUTOLOAD_CYCLE_MATERIAL_BW">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_y" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_SELECT_ALL_MATERIALS" >
+        <actionBinding action="UNIVERSALAUTOLOAD_SELECT_ALL_MATERIALS">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_y" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_CYCLE_CONTAINER_FW" >
+        <actionBinding action="UNIVERSALAUTOLOAD_CYCLE_CONTAINER_FW">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_t" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_CYCLE_CONTAINER_BW" >
+        <actionBinding action="UNIVERSALAUTOLOAD_CYCLE_CONTAINER_BW">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_t" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_SELECT_ALL_CONTAINERS" >
+        <actionBinding action="UNIVERSALAUTOLOAD_SELECT_ALL_CONTAINERS">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_t" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_BELTS" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_BELTS">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_l" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_DOOR" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_DOOR">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_x" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_CURTAIN" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_CURTAIN">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_z" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_SHOW_DEBUG" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_SHOW_DEBUG">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_lshift KEY_f12" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_SHOW_LOADING" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_SHOW_LOADING">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_f12" />
         </actionBinding>
-        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_COLLECTION" >
+        <actionBinding action="UNIVERSALAUTOLOAD_TOGGLE_COLLECTION">
             <binding device="KB_MOUSE_DEFAULT" input="KEY_lctrl KEY_lshift KEY_r" />
         </actionBinding>
     </inputBinding>

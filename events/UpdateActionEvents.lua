@@ -48,7 +48,7 @@ function UpdateActionEvents.sendEvent(vehicle, loadCount, unloadCount, noEventSe
 			g_server:broadcastEvent(UpdateActionEvents.new(vehicle, loadCount, unloadCount), nil, nil, vehicle)
 		else
 			--print("client: Update Action Events")
-			g_client:getServerConnection():sendEvent(UpdateActionEvents.new(vehicle))
+			g_client:getServerConnection():sendEvent(UpdateActionEvents.new(vehicle, loadCount, unloadCount))
 		end
 	end
 end
